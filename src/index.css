@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* ============================================
+   FABIO IA — Paleta UX/UI 2026
+   Tendencias: Mood-mode dark, micro-glow neon,
+   gradientes suaves, alto contraste OLED,
+   acentos ciano/violeta/amber
+   ============================================ */
+
+@theme {
+  /* Primary: Violeta vibrante (interatividade, CTAs) */
+  --color-primary: #7c5cfc;
+  --color-primary-dark: #6a4de8;
+  --color-primary-light: #a78bfa;
+
+  /* Accent: Ciano neon (dados, destaque, glow) */
+  --color-accent: #00d4ff;
+  --color-accent-dark: #00b8db;
+
+  /* Surfaces: Navy profundo, OLED-friendly */
+  --color-surface: #0f1729;
+  --color-surface-light: #172033;
+  --color-surface-lighter: #1e2a42;
+
+  /* Background: Quase-preto azulado */
+  --color-bg: #080d19;
+
+  /* Texto: Branco frio com secondary suave */
+  --color-text-primary: #eaf0ff;
+  --color-text-secondary: #7b8ba8;
+
+  /* Semanticas */
+  --color-success: #34dd87;
+  --color-danger: #ff4a6e;
+  --color-warning: #ffad00;
+  --color-info: #00b5e6;
+
+  /* Brands */
+  --color-instagram: #f0427a;
+  --color-youtube: #ff3b3b;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1e2a42 transparent;
+}
+
+body {
+  margin: 0;
+  background-color: #080d19;
+  color: #eaf0ff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Micro-glow effects — tendencia 2026 */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(124, 92, 252, 0.25), 0 0 60px rgba(124, 92, 252, 0.08);
+}
+.glow-accent {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2), 0 0 60px rgba(0, 212, 255, 0.06);
+}
+.glow-success {
+  box-shadow: 0 0 12px rgba(52, 221, 135, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(124, 92, 252, 0.3); }
+  50% { box-shadow: 0 0 24px rgba(124, 92, 252, 0.55); }
+}
+.animate-glow-pulse {
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
