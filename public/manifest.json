@@ -1,7 +1,7 @@
 {
-  "name": "Fabio IA - Agentes Autônomos de IA",
-  "short_name": "Fabio IA",
-  "description": "Plataforma de agentes autônomos de IA para solopreneurs e profissionais autônomos. Analytics, automação e gestão inteligente.",
+  "name": "GRZ - Gestao Risco Zero",
+  "short_name": "GRZ",
+  "description": "Plataforma GRZ para solopreneurs e profissionais autonomos. Google Meu Negocio, Instagram, Trafego Pago, WhatsApp e IA.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#080d19",

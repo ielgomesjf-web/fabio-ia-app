@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ============================================
-   FABIO IA — Paleta UX/UI 2026
+   GRZ — Paleta UX/UI 2026
    Tendencias: Mood-mode dark, micro-glow neon,
    gradientes suaves, alto contraste OLED,
    acentos ciano/violeta/amber
@@ -85,4 +85,24 @@ body {
 }
 .animate-glow-pulse {
   animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+/* Logo animation — shimmer light moderno 2026 */
+@keyframes logoShimmer {
+  0% { filter: drop-shadow(0 0 4px rgba(124, 92, 252, 0.2)) brightness(1); }
+  25% { filter: drop-shadow(0 0 12px rgba(0, 212, 255, 0.35)) brightness(1.08); }
+  50% { filter: drop-shadow(0 0 8px rgba(124, 92, 252, 0.4)) brightness(1.05); }
+  75% { filter: drop-shadow(0 0 14px rgba(0, 212, 255, 0.3)) brightness(1.1); }
+  100% { filter: drop-shadow(0 0 4px rgba(124, 92, 252, 0.2)) brightness(1); }
+}
+.animate-logo-shimmer {
+  animation: logoShimmer 4s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+.animate-logo-float {
+  animation: logoFloat 3s ease-in-out infinite;
 }

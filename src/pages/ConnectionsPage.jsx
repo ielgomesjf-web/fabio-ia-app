@@ -102,7 +102,7 @@ export default function ConnectionsPage() {
           <Globe size={16} className="text-primary" /> Navegador Autonomo na Nuvem
         </h3>
         <p className="text-xs text-text-secondary mb-3">
-          Capacidades do navegador autonomo operado pela Fabio IA:
+          Capacidades do navegador autonomo operado pela GRZ:
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
           {[
