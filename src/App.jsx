@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Sidebar from './components/Sidebar';
 import Dashboard from './pages/Dashboard';
 import GMNPage from './pages/GMNPage';
@@ -15,10 +16,31 @@ import RelatoriosPage from './pages/RelatoriosPage';
 import ConnectionsPage from './pages/ConnectionsPage';
 
 export default function App() {
+  // Mobile: menu starts OPEN (user sees menu first)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 768;
+    }
+    return false;
+  });
+
+  // Listen for resize to close mobile menu on desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="flex min-h-screen bg-bg">
-      <Sidebar />
-      <main className="flex-1 md:ml-64 p-4 md:p-6 pt-16 md:pt-6 max-w-[1400px]">
+      <Sidebar mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
+      <main className={`flex-1 md:ml-64 p-4 md:p-6 pt-16 md:pt-6 max-w-[1400px] transition-opacity duration-300 ${
+        mobileMenuOpen ? 'opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto' : 'opacity-100'
+      }`}>
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/gmn" element={<GMNPage />} />
