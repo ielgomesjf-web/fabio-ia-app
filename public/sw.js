@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fabio-ia-v1';
+const CACHE_NAME = 'grz-v2';
 const OFFLINE_URL = '/offline.html';
 
 // Assets to cache on install
