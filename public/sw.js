@@ -98,7 +98,7 @@ self.addEventListener('fetch', (event) => {
 // Handle push notifications (future use)
 self.addEventListener('push', (event) => {
   const data = event.data?.json() || {};
-  const title = data.title || 'Fabio IA';
+  const title = data.title || 'GRZ';
   const options = {
     body: data.body || 'Nova atualização disponível',
     icon: '/icons/icon-192x192.png',
