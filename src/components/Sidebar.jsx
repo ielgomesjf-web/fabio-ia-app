@@ -2,11 +2,12 @@ import { NavLink } from 'react-router-dom';
 import {
   LayoutDashboard, Instagram, Youtube, Lightbulb, TrendingUp,
   Calendar, Zap, Link2, Bot, Menu, X, ChevronRight,
-  MapPin, Megaphone, Phone, MessageCircle, FileText
+  MapPin, Megaphone, Phone, MessageCircle, FileText, Radar
 } from 'lucide-react';
 import { useState } from 'react';
 
 const navItems = [
+  { path: '/radar', icon: Radar, label: 'Radar Presenca', desc: 'SEO local & leads', notifications: 0 },
   { path: '/', icon: LayoutDashboard, label: 'Dashboard', desc: 'Metricas gerais', notifications: 0 },
   { path: '/gmn', icon: MapPin, label: 'Google Meu Negocio', desc: 'SEO local & avaliacoes', notifications: 3 },
   { path: '/instagram', icon: Instagram, label: 'Instagram', desc: 'Analise de perfil', notifications: 5 },

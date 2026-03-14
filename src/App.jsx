@@ -14,6 +14,7 @@ import CalendarPage from './pages/CalendarPage';
 import SkillsPage from './pages/SkillsPage';
 import RelatoriosPage from './pages/RelatoriosPage';
 import ConnectionsPage from './pages/ConnectionsPage';
+import RadarPresencaPage from './pages/RadarPresencaPage';
 
 export default function App() {
   // Mobile: menu starts OPEN (user sees menu first)
@@ -44,6 +45,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/gmn" element={<GMNPage />} />
+          <Route path="/radar" element={<RadarPresencaPage />} />
           <Route path="/instagram" element={<InstagramAnalysis />} />
           <Route path="/youtube" element={<YouTubeAnalysis />} />
           <Route path="/trafego" element={<TrafegoPagoPage />} />
